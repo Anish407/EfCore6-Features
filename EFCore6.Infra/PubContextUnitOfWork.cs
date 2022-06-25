@@ -17,6 +17,12 @@ namespace EFCore6.Infra
 
         public IBooksRepository BooksRepository => new BooksRepository(PubContext);
 
+        public ICoversRepository CoversRepository => new CoversRepository(PubContext);
+
+        public IArtistRepository ArtistRepository => new ArtistRepository(PubContext);
+
+        public string State() => PubContext.ChangeTracker.DebugView.ShortView;
+
         public async Task SaveChanges()
         {
             await PubContext.SaveChangesAsync();

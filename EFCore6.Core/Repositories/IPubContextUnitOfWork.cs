@@ -6,6 +6,9 @@ namespace EFCore6.Core.Repositories
     {
         IAuthorRepository AuthorRepository { get; }
         IBooksRepository BooksRepository { get; }
+        ICoversRepository CoversRepository { get; }
+        IArtistRepository ArtistRepository { get; }
+        string State();
         Task SaveChanges();
     }
 }

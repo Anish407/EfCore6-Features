@@ -6,6 +6,8 @@ using System.Security.Cryptography;
 
 namespace EfCore6.Features.Controllers
 {
+
+    // One To Many
     //[ApiController]
     [Route("[controller]")]
     public class AuthorsController : ControllerBase

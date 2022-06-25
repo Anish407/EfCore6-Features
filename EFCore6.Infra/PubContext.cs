@@ -18,6 +18,8 @@ namespace EFCore6.Infra
 
         public DbSet<Author> Authors { get; set; }
         public DbSet<Book> Books  { get; set; }
+        public DbSet<Cover> Covers  { get; set; }
+        public DbSet<Artist> Artists  { get; set; }
         public IConfiguration Configuration { get; }
     }
 }

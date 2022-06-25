@@ -12,6 +12,7 @@ builder.Services.AddDbContext<PubContext>(op => op.UseSqlServer());
 builder.Services.AddControllers();
 
 builder.Services.AddScoped<IAuthorService, AuthorService>();
+builder.Services.AddScoped<IManyToManyService, ManyToManyService>();
 builder.Services.AddScoped<IPubContextUnitOfWork, PubContextUnitOfWork>();
 
 builder.Services.AddEndpointsApiExplorer();

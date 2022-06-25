@@ -13,4 +13,5 @@ set the entity state for us.</li>
 <li> DBSet.Add will set the entity state to added and Update will set the entity state to modified. So be carefull when updating data
 as it will generate an insert statement in sql if we try to update an exisiting entity and add use the add method. </li>
 <li> Where and OrderBy inside the include statement will be added to the sql query sent to the database</li>
+<li> By default delete on cascade is turned on. SO inorder to not delete the related entities just set the foreign key to null</li>
 </ul>
