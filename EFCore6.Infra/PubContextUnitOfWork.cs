@@ -6,9 +6,9 @@ namespace EFCore6.Infra
 {
     public class PubContextUnitOfWork : IPubContextUnitOfWork
     {
-        public PubContextUnitOfWork(IConfiguration configuration)
+        public PubContextUnitOfWork(PubContext pubContext)
         {
-            PubContext = new PubContext(configuration);
+            PubContext = pubContext;
         }
 
         public PubContext PubContext { get; }

@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;
 
-builder.Services.AddDbContext<PubContext>(op => op.UseSqlServer());
+builder.Services.AddDbContextPool<PubContext>(op => op.UseSqlServer(configuration.GetConnectionString("PubContext")));
 builder.Services.AddControllers();
 
 builder.Services.AddScoped<IAuthorService, AuthorService>();
